@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800');
+
+* {
+  margin: 0;
+  box-sizing: content-box;
+}
+
+a, a:hover, a:visited, a:active, a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+html {
+  font-size: 12pt;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  padding-top: 1em;
+}
+
+section {
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+section.thick {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: -0.04em;
+}
+
+h1 span.trademark {
+  font-size: 0.35em;
+  position: relative;
+  top: 0.45em;
+  font-weight: 800;
+  vertical-align: top;
+}
+
+.btn {
+  display: block;
+  margin: 1em;
+  padding: 1em 2em;
+  border: 1px solid black;
+  font-size: 1.2em;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-property: background-color, border-color, color, transform;
+}
+
+.btn.light {
+  background-color: white;
+}
+
+.btn.light, .btn.light:hover, .btn.light:visited, .btn.light:active, .btn.light:focus {
+  color: black;
+}
+
+.btn.light:hover {
+  color: white;
+  border-color: white;
+  background-color: black;
+  transform: translateY(-5px);
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.padded {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+@media (min-width: 350px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .btn {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
