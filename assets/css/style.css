@@ -72,10 +72,26 @@ h1 span.trademark {
 
 h2 {  font-size: 1.2rem;  }
 
+.action-container {
+  display: inline-block;
+  margin: 0;
+}
+
+.action-container p {
+  display: none;
+  margin: 0;
+  transition: transform 0.3s ease-out;
+}
+
+.action-container p.active {
+  transform: translateY(3em);
+}
+
 .btn {
   display: block;
   margin: 1em;
   padding: 1em 2em;
+  min-width: 200px;
   border: 1px solid black;
   font-size: 1.2em;
   transition-duration: 0.3s;
@@ -121,12 +137,18 @@ h2 {  font-size: 1.2rem;  }
   h2 {  font-size: 1.6em;  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   h1 {
     font-size: 4rem;
   }
   .btn {
     display: inline-block;
+  }
+  section.buttons h2 {
+    display: none;
+  }
+  .action-container p {
+    display: block;
   }
 }
 
