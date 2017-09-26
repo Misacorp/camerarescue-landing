@@ -37,7 +37,7 @@ body {
 }
 
 main {
-  padding-top: 1em;
+  padding-top: 3em;
 }
 
 section {
@@ -53,10 +53,11 @@ section.thick {
 
 h1, h2, h3, h4 {
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 
 h1 {
+  margin-bottom: 1rem;
   font-size: 1.4rem;
   letter-spacing: -0.04em;
 }
@@ -68,6 +69,8 @@ h1 span.trademark {
   font-weight: 800;
   vertical-align: top;
 }
+
+h2 {  font-size: 1.2rem;  }
 
 .btn {
   display: block;
@@ -98,7 +101,6 @@ h1 span.trademark {
 .dark {
   background-color: black;
   color: white;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 }
 
 .bold {
@@ -110,10 +112,13 @@ h1 span.trademark {
   padding-right: 3%;
 }
 
+@media (min-width: 200px) {
+  h1 {  font-size: 1.6rem;  }
+}
+
 @media (min-width: 350px) {
-  h1 {
-    font-size: 2.5rem;
-  }
+  h1 {  font-size: 2.8rem;  }
+  h2 {  font-size: 1.6em;  }
 }
 
 @media (min-width: 600px) {
@@ -128,5 +133,24 @@ h1 span.trademark {
 @media (min-width: 1000px) {
   h1 {
     font-size: 6rem;
+  }
+  section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+  section.thick {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  section.thick {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
