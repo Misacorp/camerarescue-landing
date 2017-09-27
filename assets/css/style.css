@@ -92,6 +92,8 @@ img {
 }
 
 .action-container p.active {
+  -webkit-transform: translateY(3em);
+  -ms-transform: translateY(3em);
   transform: translateY(3em);
 }
 
@@ -120,6 +122,8 @@ img {
 }
 
 .btn:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
 }
 
