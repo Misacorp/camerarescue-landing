@@ -12,6 +12,9 @@ a, a:hover, a:visited, a:active, a:focus {
 
 p {
   margin-bottom: 1em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 html {
@@ -28,7 +31,6 @@ main {
 
 section {
   clear: both;
-  margin-bottom: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -44,7 +46,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-size: 1.4rem;
   letter-spacing: -0.04em;
 }
@@ -71,7 +73,7 @@ img {
 }
 
 .camera-container {
-  margin-top: 3em;
+  margin-bottom: 4em;
   width: 100%;
   margin-left: auto;
   margin-right: auto;

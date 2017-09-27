@@ -39,9 +39,9 @@ function setToMaxWidth(el, max) {
 
 var onDOMReady = function(){
   let main_title = document.getElementsByTagName('h1')[0];
-  setToMaxWidth(main_title, 1400);
+  setToMaxWidth(main_title, 800);
   window.addEventListener('resize',function() {
-    setToMaxWidth(main_title, 1400);
+    setToMaxWidth(main_title, 800);
   })
 };
 
