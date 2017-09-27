@@ -16,82 +16,41 @@ for(let i = 0; i < buttons. length; i++) {
   });
 }
 
+//  Set text element to window.innerWidth. Use $max to specify a maximum width.
+function setToMaxWidth(el, max) {
+  let style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+  let fontSize = parseFloat(style); 
 
+  //  Ratio of optimal font size in px to width in px.
+  //  Only applies to currently set font details. Needs to be updated if style changes.
+  const T_WIDTH = 864;
+  const T_SIZE = 112;
+  let ratio = T_SIZE / T_WIDTH;
 
-
-window.onscroll = function() {
-  window.requestAnimationFrame(revealHiddenContents);
-}
-
-
-function revealHiddenContents() {
-  let sections = document.getElementsByClassName('reveal');
-  for(let i = 0; i < sections.length; i++) {
-    if(isInViewport(sections[i])) {
-      sections[i].classList.remove('hiding');
-    }
+  if(window.innerWidth > max) {
+    el.style.fontSize = ratio * max + "px";
+  }
+  else {  
+    //  Font = ratio * viewport width
+    el.style.fontSize = ratio * window.innerWidth + "px";
   }
 }
+
 
 var onDOMReady = function(){
-  let sliders = document.getElementsByClassName('slide');
-  //  Remove slide-left and slide-right classes.
-  for(let i = 0; i < sliders.length; i++) {
-    sliders[i].classList.remove('slide-left');
-    sliders[i].classList.remove('slide-right');
-  }
-  //  Reveal content in viewport
-  revealHiddenContents();
+  let main_title = document.getElementsByTagName('h1')[0];
+  setToMaxWidth(main_title, 1400);
+  window.addEventListener('resize',function() {
+    setToMaxWidth(main_title, 1400);
+  })
 };
+
 
 if (
     document.readyState === "complete" ||
     (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
-  callback();
+  onDOMReady();
 } else {
   document.addEventListener("DOMContentLoaded", onDOMReady);
-}
-
-
-
-
-function isInViewport(el) {
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-        el = el[0];
-    }
-
-    //  Get element's dimensions.
-    var rect = el.getBoundingClientRect();
-
-    //  How much the container needs to be inside the viewport
-    let threshold = 200;
-
-    let viewport_top = 0;
-    let viewport_bot = viewport_top + window.innerHeight;
-
-    //  Get height of viewport and container.
-    let viewport_height = viewport_bot - viewport_top;
-    let rect_height = rect.bottom - rect.top;
-
-    //  Declare some booleans.
-    let top_inside, bot_inside;
-
-    //  Viewport is smaller than container.
-    if(viewport_height <= rect_height) {
-      //  Check if viewport edges are inside container.
-      top_inside = rect.top <= viewport_top && viewport_top <= rect.bottom;
-      bot_inside = rect.top <= viewport_bot && viewport_bot <= rect.bottom;
-
-      return (top_inside || bot_inside);
-  }
-
-  //  Container is smaller than viewport.
-  else {
-    //  Check if container edges are inside viewport.
-      top_inside = viewport_top + threshold < rect.top && rect.top < viewport_bot;
-      bot_inside = viewport_top < rect.bottom && rect.bottom < viewport_bot;
-
-      return (top_inside || bot_inside);
-  }
 }

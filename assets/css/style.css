@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
 
 * {
   margin: 0;
@@ -27,6 +27,7 @@ main {
 }
 
 section {
+  clear: both;
   margin-bottom: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -58,11 +59,17 @@ h1 span.trademark {
 }
 
 h2 {  font-size: 1.2rem;  }
+h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
 
 .slide {
+  will-change: transform;
   transition: transform 0.5s cubic-bezier(.06,.56,.49,1);
   transform: translateX(0);
-  display: inline-block;
+  display: block;
+  float: left;
 }
 
 .slide-left {
@@ -76,20 +83,20 @@ h2 {  font-size: 1.2rem;  }
 .reveal {
   min-height: 200px;
   will-change: transform, opacity;
-  transform: translateY(0);
+  transform: translateX(0);
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-.reveal:nth-of-type(2) { transition-delay: 0.1s; }
-.reveal:nth-of-type(3) { transition-delay: 0.2s; }
+/*.reveal:nth-of-type(2) { transition-delay: 0.1s; }
+.reveal:nth-of-type(3) { transition-delay: 0.2s; }*/
 
 .hiding {
   opacity: 0;
-  transform: translateY(5rem);
+  transform: translateX(-5%);
 }
 
 .action-container {
-  display: inline-block;
+  display: block;
   margin: 0;
 }
 
@@ -104,8 +111,8 @@ h2 {  font-size: 1.2rem;  }
 }
 
 .btn {
-  display: block;
-  margin: 1em;
+  display: inline-block;
+  margin: 0.5em;
   padding: 1em 2em;
   min-width: 200px;
   border: 1px solid black;
@@ -123,11 +130,24 @@ h2 {  font-size: 1.2rem;  }
   color: black;
 }
 
+.btn.dark, .btn.dark:hover, .btn.dark:visited, .btn.dark:active, .btn.dark:focus {
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
 .btn.light:hover {
   color: white;
   border-color: white;
   background-color: black;
-  transform: translateY(-5px);
+}
+
+.btn.dark:hover {
+  color: black;
+  border-color: black;
+  background-color: white;
 }
 
 .dark {
@@ -158,16 +178,42 @@ h2 {  font-size: 1.2rem;  }
   text-align: left;
 }
 
-.logo-container {
-  display: inline-block;
-  background-color: black;
-  width: 20%;
+.align-right {
+  text-align: right;
+} 
 
-  height: 5rem;
-  font-size: 2em;
-  color: white;
-  font-weight: 800;
-  line-height: 5rem;
+.company {
+  vertical-align: top;
+  display: block;
+  margin-bottom: 2em;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.company h3 {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.logo-container {
+  line-height: 100px;
+  height: 100px;
+  max-width: 100%;
+}
+
+.logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  filter: grayscale(100%);
+}
+
+.company-description {
+  display: inline-block;
+}
+
+.company-description h3 {
+  margin-bottom: 0.2em;
 }
 
 @media (min-width: 200px) {
@@ -179,19 +225,22 @@ h2 {  font-size: 1.2rem;  }
   h2 {  font-size: 1.6em;  }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 670px) {
   h1 {
     font-size: 4rem;
   }
-  .btn {
+  .action-container {
     display: inline-block;
+  }
+  .btn {
+    margin: 1em;
   }
   section.buttons h2 {
     display: none;
   }
   .action-container p {
     display: block;
-    margin-top: 2em;
+    margin-top: 0.5em;
   }
 }
 
@@ -206,6 +255,10 @@ h2 {  font-size: 1.2rem;  }
   section.thick {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+  .company {
+    display: inline-block;
+    width: 40%;
   }
 }
 
