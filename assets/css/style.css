@@ -59,6 +59,35 @@ h1 span.trademark {
 
 h2 {  font-size: 1.2rem;  }
 
+.slide {
+  transition: transform 0.5s cubic-bezier(.06,.56,.49,1);
+  transform: translateX(0);
+  display: inline-block;
+}
+
+.slide-left {
+  transform: translateX(-200%);
+}
+
+.slide-right {
+  transform: translateX(200%);
+}
+
+.reveal {
+  min-height: 200px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.reveal:nth-of-type(2) { transition-delay: 0.1s; }
+.reveal:nth-of-type(3) { transition-delay: 0.2s; }
+
+.hiding {
+  opacity: 0;
+  transform: translateY(5rem);
+}
+
 .action-container {
   display: inline-block;
   margin: 0;
@@ -67,7 +96,7 @@ h2 {  font-size: 1.2rem;  }
 .action-container p {
   display: none;
   margin: 0;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ;
 }
 
 .action-container p.active {
