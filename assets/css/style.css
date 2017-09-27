@@ -64,35 +64,17 @@ h3 {
   font-size: 1.3rem;
 }
 
-.slide {
-  will-change: transform;
-  transition: transform 0.5s cubic-bezier(.06,.56,.49,1);
-  transform: translateX(0);
-  display: block;
-  float: left;
+img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: grayscale(100%);
 }
 
-.slide-left {
-  transform: translateX(-200%);
-}
-
-.slide-right {
-  transform: translateX(200%);
-}
-
-.reveal {
-  min-height: 200px;
-  will-change: transform, opacity;
-  transform: translateX(0);
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-/*.reveal:nth-of-type(2) { transition-delay: 0.1s; }
-.reveal:nth-of-type(3) { transition-delay: 0.2s; }*/
-
-.hiding {
-  opacity: 0;
-  transform: translateX(-5%);
+.camera-container {
+  margin-top: 3em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .action-container {
@@ -202,10 +184,7 @@ h3 {
 }
 
 .logo-container img {
-  max-width: 100%;
-  max-height: 100%;
   vertical-align: middle;
-  filter: grayscale(100%);
 }
 
 .company-description {
@@ -247,6 +226,9 @@ h3 {
 @media (min-width: 1000px) {
   h1 {
     font-size: 6rem;
+  }
+  .camera-container {
+    width: 80%;
   }
   section {
     padding-top: 3.5rem;
