@@ -35,7 +35,7 @@ section {
   padding-bottom: 2rem;
 }
 
-section.thick {
+.thick {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -73,9 +73,9 @@ img {
 }
 
 .camera-container {
-  margin-bottom: 4em;
   width: 100%;
   max-width: 1200px;
+  margin-bottom: 2em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -196,6 +196,7 @@ img {
 
 .company-description {
   display: inline-block;
+  max-width: 500px;
 }
 
 .company-description h3 {
@@ -236,12 +237,13 @@ img {
   }
   .camera-container {
     width: 80%;
+    margin-bottom: 7rem;
   }
   section {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
-  section.thick {
+  .thick {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
