@@ -14,20 +14,6 @@ p {
   margin-bottom: 1em;
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-left {
-  text-align: left;
-}
-
 html {
   font-size: 12pt;
 }
@@ -68,6 +54,7 @@ h1 span.trademark {
   top: 0.45em;
   font-weight: 800;
   vertical-align: top;
+  user-select: none;
 }
 
 h2 {  font-size: 1.2rem;  }
@@ -126,6 +113,32 @@ h2 {  font-size: 1.2rem;  }
 .padded {
   padding-left: 3%;
   padding-right: 3%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.logo-container {
+  display: inline-block;
+  background-color: black;
+  width: 20%;
+
+  height: 5rem;
+  font-size: 2em;
+  color: white;
+  font-weight: 800;
+  line-height: 5rem;
 }
 
 @media (min-width: 200px) {
