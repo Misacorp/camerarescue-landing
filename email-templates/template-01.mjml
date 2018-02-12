@@ -1,0 +1,126 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat" />
+
+    <mj-attributes>
+      <mj-container background-color="#ffffff" />
+      <mj-text font-family="Montserrat" />
+      <mj-button background-color="#000000" color="#ffffff" />
+    </mj-attributes>
+
+    <mj-style>
+      a, a:visited, a:active, a:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .heading {
+        font-size: 2em;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .link-nostyle {
+        color: inherit;
+        text-decoration: none
+      }
+      .thin {
+        padding: 0;
+      }
+      .product-list p {
+        margin:0;
+        padding: 0;
+      }
+      .dark {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      .dark ul, .dark p {
+        color: #ffffff;
+      }
+      .footer ul {
+        padding: 0;
+        list-style: none;
+        list-style-position: outside;
+      }
+      .floatLeft {
+        float: left;
+      }
+      .floatRight {
+        float: right;
+      }
+      .clear {
+        clear: both;
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image align="center" src="https://camerarescue.org/logo/camera_rescue_logo_text_black@2x.png" />
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0">
+        <mj-column width="100%">
+          <mj-text>
+            <h1 class="heading">Message title</h1>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0">
+        <mj-column width="60%" vertical-align="middle">
+          <mj-text>
+            <p>Et dolore veniam incididunt et consequat adipisicing qui mollit officia proident occaecat aute. Deserunt nulla velit et incididunt sit exercitation ad magna ad dolor elit..</p>
+            <p>Reprehenderit enim reprehenderit Lorem proident minim eiusmod pariatur.</p>
+          </mj-text>
+        </mj-column>
+        <mj-column width="40%" vertical-align="middle">
+          <mj-button href="https://camerarescue.org">
+            Call to action
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <mj-section css-class="product-list"  padding-bottom="30px">
+        <mj-column width="100%">
+          <mj-text>
+            <h3>Products</h3>
+            <p class="floatLeft">Product name</p>
+            <p class="floatRight">12,34 EUR</p>
+            <div class="clear"></div>
+
+            <p class="floatLeft">Product name</p>
+            <p class="floatRight">123,45 EUR</p>
+            <div class="clear"></div>
+
+            <p class="floatLeft">Product name</p>
+            <p class="floatRight">1234,56 EUR</p>
+            <div class="clear"></div>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section css-class="dark footer" padding="0" >
+        <mj-column width="80%">
+          <mj-text align="center">
+            <ul>
+              <li>Camera Rescue</li>
+              <li><a href="//camerarescue.org">camerarescue.org</a></li>
+            </ul>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section css-class="thin">
+        <mj-column width="100%" css-class="thin">
+          <mj-text align="center" css-class="thin">
+            <p>Service provided by Toriverkosto Oy Ltd.</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+    </mj-container>
+  </mj-body>
+</mjml>
