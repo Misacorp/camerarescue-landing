@@ -1,0 +1,71 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat" />
+
+    <mj-attributes>
+      <mj-container background-color="#ffffff" />
+      <mj-text font-family="Montserrat" />
+      <mj-button background-color="#000000" color="#ffffff" />
+    </mj-attributes>
+
+    <mj-style>
+      .heading {
+        font-size: 2em;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .link-nostyle {
+        color: inherit;
+        text-decoration: none
+      }
+      .dark {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      .dark p {
+        color: #ffffff;
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image align="center" src="https://camerarescue.org/logo/camera_rescue_logo_text_black@2x.png" />
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0">
+        <mj-column width="100%">
+          <mj-text>
+            <h1 class="heading">Ahoy mates!</h1>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0">
+        <mj-column width="60%" vertical-align="middle">
+          <mj-text>
+            <p>We be sailing and plundering. Get on deck, fill yer tankard and lower the sails. Booty awaits on the seas!</p>
+            <p>Land ahoy, we've made it to Thieve's Haven! Get yer shovels and start digging!</p>
+          </mj-text>
+        </mj-column>
+        <mj-column width="40%" vertical-align="middle">
+          <mj-button href="https://camerarescue.org">
+            Treasure map
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <mj-section css-class="dark" padding="0">
+        <mj-column width="100%">
+          <mj-text>
+            <p>Gargantuan monsters be roaming the seas. Be wary when ye set yer sails, for they will show you no mercy.</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+    </mj-container>
+  </mj-body>
+</mjml>
